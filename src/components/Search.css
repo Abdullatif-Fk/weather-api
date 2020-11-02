@@ -3,7 +3,40 @@
 }
 */
 
-input{
-color: white;
 
-}
+.search{
+    max-width: 100%;
+    background-color: #759EDA;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    font-family: "Raleway", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /*  Search bar */
+  input{
+    background-color: #759EDA;
+    border: 0px  solid;
+    height: 20px;
+    width: 160px;
+    color: white;
+  }
+  input:focus {
+    outline:none;
+    border-bottom: 1px solid rgb(31, 31, 78);
+    font-family: "Raleway", sans-serif;
+  }
+  input:focus::placeholder {
+    color: transparent;
+  }
+  button{
+    background-color: #486CB2;
+    font-family: "Raleway", sans-serif;
+    color: black;
+    padding: 15px;
+    border: none;
+    width: 150px;
+  }

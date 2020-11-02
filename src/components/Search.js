@@ -9,7 +9,9 @@ class Search extends React.Component {
 
   render() {
     return (
-      <div>
+
+
+      <div className="search">
         {/*this.state.input*/}
         <input
           type="text"
@@ -26,6 +28,8 @@ class Search extends React.Component {
           FIND WETHER
         </button>
       </div>
+
+
     );
   }
 }
