@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import Search from "./components/Search";
 import Weather_now from "./components/weather_now";
-import Weather_24 from "./components/Weather_24";
+import Weather_24 from "./components/Weather_24"; 
+import FakeWeather from "./data/FakeWeather.json";
 
 
 
@@ -14,8 +15,9 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: "Abdullatif"
+      name: "Abdullatif",
     };
+    //console.log({FakeWeather});
   }
 
   handleInputChange = value => {
@@ -23,16 +25,26 @@ class App extends Component {
   };
 
   render() {
+    let listOfWeathers = FakeWeather.list.slice(1,8).map(Weather => {
+
+      return Weather;
+    })
+
     return (
+     
       <div id="app">
         
-          <Search handleInput={this.handleInputChange} />
-          <Weather_now/>
-          <Weather_24/>
+          <Search handleInput={this.handleInputChange}/>
+          {/*this.state.description*/}
+          <Weather_now list={listOfWeathers}/>
+          <Weather_24 list={listOfWeathers}/>
+         <div>
+         </div>
             
           
           
         </div>
+         
       
     );
   }
